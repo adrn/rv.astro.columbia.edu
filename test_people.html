@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Rooftop Variables - Home</title>
+
+<style type="text/css">
+<!--
+-->
+</style>
+<link href="../rv.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('../images/nav/aboutover.jpg','../images/nav/peopleover.jpg','../images/nav/scienceover.jpg','../images/nav/linksover.jpg','../images/nav/people.jpg','../images/nav/aboutdown.jpg','../images/nav/aboutodown.jpg','../images/nav/peopleodown.jpg','../images/nav/sciencedown.jpg','../images/nav/scienceodown.jpg','../images/nav/linksdown.jpg','../images/nav/linksodown.jpg','../images/nav/imagedown.jpg','../images/nav/imageover.jpg','../images/nav/imageodown.jpg','../images/nav/homedown.jpg','../images/nav/homeover.jpg','../images/nav/homeodown.jpg')">
+<table width="800" border="0" align="center" cellspacing="0">
+  <tr>
+    <td><img src="../images/header.jpg" alt="" name="" width="800" height="250" /></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <table border="0" cellpadding="10" cellspacing="0" bordercolor="#000000">
+        <tr>
+          <td><a href="../index.html" target="_top" onclick="MM_nbGroup('down','group1','home','../images/nav/homedown.jpg',1)" onmouseover="MM_nbGroup('over','home','../images/nav/homeover.jpg','../images/nav/homeodown.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="../images/nav/home.jpg" alt="Home" name="home" border="0" id="home" onload="" /></a></td>
+          <td><a href="../about.html" target="_top" onclick="MM_nbGroup('down','group1','about','../images/nav/aboutdown.jpg',1)" onmouseover="MM_nbGroup('over','about','../images/nav/aboutover.jpg','../images/nav/aboutodown.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="../images/nav/about.jpg" alt="About RV" name="about" border="0" id="about" onload="" /></a></td>
+          <td><a href="../people.html" target="_top" onclick="MM_nbGroup('down','group1','people','../images/nav/peopledown.jpg',1)" onmouseover="MM_nbGroup('over','people','../images/nav/peopleover.jpg','../images/nav/peopleodown.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="../images/nav/peopledown.jpg" alt="People" name="people" border="0" id="people" onload="MM_nbGroup('init','group1','people','../images/nav/people.jpg',1)" /></a></td>
+          <td><a href="../science.html" target="_top" onclick="MM_nbGroup('down','group1','science','../images/nav/sciencedown.jpg',1)" onmouseover="MM_nbGroup('over','science','../images/nav/scienceover.jpg','../images/nav/scienceodown.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="../images/nav/science.jpg" alt="Science" name="science" border="0" id="science" onload="" /></a></td>
+          <td><a href="../images.html" target="_top" onclick="MM_nbGroup('down','group1','Images','../images/nav/imagedown.jpg',1)" onmouseover="MM_nbGroup('over','Images','../images/nav/imageover.jpg','../images/nav/imageodown.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="../images/nav/image.jpg" alt="Images" name="Images" border="0" id="Images" onload="" /></a></td>
+          <td><a href="../links.html" target="_top" onclick="MM_nbGroup('down','group1','links','../images/nav/linksdown.jpg',1)" onmouseover="MM_nbGroup('over','links','../images/nav/linksover.jpg','../images/nav/linksodown.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="../images/nav/links.jpg" alt="links" name="links" border="0" id="links" onload="" /></a></td>
+        </tr>
+      </table>
+    </div></td>
+  </tr>
+  <tr>
+	 <td  bordercolor="#A4A4A4" class="foo">
+      <p align="center"><img src="../images/people/group.png" width="750" border="0" usemap="#Map" /></p>
+      <table width="1026" border="0" cellspacing="10">
+    </div></td>
+  </tr>
+  <tr>
+    <td bordercolor="#A4A4A4" class="foo"><h2 align="center"><u>Teachers</u></h2>
+    <table width="850" border="0" cellspacing="10">
+<tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="../liz.jpg" alt="" width="150" height="200" /></td>
+        <td valign="top"><h4><u>Elisabeth Castelli</u></h4>
+          <p> 
+	</p></td>
+        <td>&nbsp;</td>
+      </tr>
+<tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="../tom.jpg" alt="" width="150" height="200" /></td>
+        <td valign="top"><h4><u>Thomas Cork</u></h4>
+          <p>
+	</p></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="scott3.jpg" alt=""></td>
+        <td valign="top"><h4><u>Scott Misner</u></h4>
+          <p>Scott Misner is a 6th grade science teacher at Isaac E. Young Middle School in New Rochelle, NY. Scott participated in Columbia’s Science Research Program the past two summers and worked in a physics lab. There he fabricated microchips and suspended carbon nanotubes across the microhips' electrodes.  He loves teaching the students about earth science and astronomy and is looking forward to enhancing his school’s astronomy lessons with a data-collecting telescope.<p>
+Outside of work Scott loves all sports.  He plays in softball and basketball leagues and is currently training for the NYC Marathon.    He is also taking guitar lessons in his spare time.  
+	</p></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="anthony2.jpg" alt=""></td>
+        <td valign="top"><h4><u>Anthony Finney</u></h4>
+        <p>Anthony is a native of Tampa, Florida where he developed an early love of science from digging ice-age fossils and scuba diving.  After five years in the aerospace industry, he moved to NYC for grad school and to pursue his calling as an educator.  Currently in his fourth year at Flushing International High School, he teaches ESL Living Environment and rotating science electives,  and is a co-founder of the school Science Club. <p>
+An alumnus of the Columbia SRP, he spent two summers investigating membrane polarity in yeast cells with the Fred Chang lab.  He looks forward to the Rooftop Variables program as an ideal opportunity to continue sharing exciting hands-on science experiences with his students.  When not teaching, he enjoys reading, BBC6 and cooking for his bride and baby daughter.</p></td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+
+  <tr>
+    <td bordercolor="#A4A4A4" class="foo"><h2 align="center"><u>Graduate Students</u></h2>
+    <table width="850" border="0" cellspacing="10">
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="pictureoflia2.jpg" alt="" /></td>
+        <td valign="top"><h4><u>Lia Corrales </u></h4>
+        <p>
+</p></td>
+        <td>&nbsp;</td>
+      </tr>
+<tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="erika.jpg" alt=""></td>
+        <td valign="top"><p><u><a name="erika" id="cameron2"></a>Erika Hamden</u></p>
+          <p>Erika is a second-year Doctoral Candidate in Astronomy at Columbia University.  She got her undergraduate degree in astronomy at Harvard College. Her research interests are in galaxies, patterns, and instrumentation.  Between college and grad school, she moved to London to go to Le Cordon Bleu culinary school.  She then worked as a chef in her hometown in New Jersey.  She receives an unusually large amount of flack for her love of her home state.</p>
+          <p>Erika comes from a family with a long history of teaching, and is excited about the chance to help teachers make science fun for students.  Outside of school, she spends a lot of time cooking, going to the Opera, and visiting New Jersey.</p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="cameron.jpg" alt=""></td>
+        <td valign="top"><h4><u>Cameron Hummels</u></h4>
+        <p>Having started his scientific education with a BA in computer science at Pomona College, and later receiving his MA in astronomy at Wesleyan University, Cameron is now a third-year PhD student at Columbia University.  Cameron's research consists of using computer simulations and observations of the sky in order to better understand how galaxies form and evolve throughout cosmological history.  He is also interested in our nearest neighbor, the Moon, and how it has changed over the last few billion years.</p>
+        <p>Cameron loves bringing science to the public through lectures, star-gazing, and outreach activities.  He one day hopes to become an astronaut.  Outside of astronomy, Cameron enjoys running, cycling, hiking, languages, mustard and Guitar Hero.</p></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="duane.jpg" alt=""></td>
+        <td valign="top"><h4><u>Duane Lee</u></h4>
+        <p>Duane is a third-year astronomy graduate student from Pittsfield, Massachusetts whose research interests include emission-line galaxies, the neutral hydrogen content and morphology in galaxy groups, and most recently, nuclear star clusters and their relationships with massive black holes.</p>
+        <p>As for public involvement in Rooftop Variables, I am optimistic about the educational and developmental benefits of this program. It is my hope that such a program can continue to address concerns in the city about the available resources and visibility of higher education programs. This program should serve to give students access to science, and astronomy in particular, that is lacking in the NYC schools and enhance the learning experience of such subjects.</p>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="maria2.jpg" alt=""></td>
+        <td valign="top"><h4><u>Maria Pereira</u></h4>
+<p>Maria is a 6th year PhD student at Columbia University, working on the  
+dynamics of galaxies in clusters. She has a Masters degree in  
+Astronomy from the University of Hawaii, and studied physics as an  
+undergraduate at Imperial College in London and the University of  
+Cambridge. Her thesis work has been mainly theoretical, involving  
+large computer simulations of galaxy clusters, but she is also an  
+enthusiastic observer, having spent many nights battling scorpions on  
+Kitt Peak, staving off frostbite on Mauna Kea, and wrestling with  
+kangaroos in the Warrumbungles.
+
+<p>When not fighting for her life on mountain-tops, or struggling with  
+the latest code crash on her computer, Maria enjoys the more quiet  
+pleasures in life: canoeing in still water, reading Portuguese poetry,  
+watching old westerns and writing in really long sentences.
+
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="../images/people/destry.jpg" alt=""></td>
+        <td valign="top"><h4><u>Destry Saul</u></h4>
+        <p>Destry is currently a second-year doctoral candidate in the Department of Astronomy at Columbia University. He recently graduated from the University of California, Berkeley with a B.A. in Astrophysics, Physics, and Theater and Performance Studies. He is interested in searching for earth-mass extrasolar planets and in cutting-edge radio astronomy.</p>
+          <p>Outside of academia, Destry enjoys cycling, playing the mandolin, and gardening. He is a (very) part-time lighting designer for theater and dance performances. He also enjoys living in Brooklyn and is planning on learning to surf this summer.</p>          </td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="../images/people/neil.jpg" alt="" width="150" height="200" /></td>
+        <td valign="top"><h4><u>Neil Zimmerman</u></h4>
+        <p>Neil is a life-long star-gazer, currently an astronomy PhD student at Columbia. He works with a research group at the American Museum of Natural History on applying new optical techniques to examine nearby stars, figuring out ways to catch their planetary systems in the act of formation. Besides looking for new things in the sky, he likes sharing the Universe with other people through teaching and volunteering.</p>
+        <p>When not doing astronomy, Neil can be found riding his bike, cooking large veggie dishes, and taking in obscure music and films.</p></td>
+        <td>&nbsp;</td>
+      </tr>
+   </table></td>
+  </tr>
+  <tr>
+    <td bordercolor="#A4A4A4" class="foo"><h2 align="center"><u>Administrators</u></h2>
+    <table width="850" border="0" cellspacing="10">
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="../images/people/marcel.jpg" alt="" width="150" height="200" /></td>
+         <td width="829" valign="top"><h4><u></a>Marcel Ag&uuml;eros</u> (<a href="http://www.astro.columbia.edu/~marcel">www.astro.columbia.edu/~marcel</a>)</h4>
+        <p>Marcel Agüeros is currently a National Science Foundation Astronomy and Astrophysics Post-doctoral Fellow in the Astrophysics Laboratory of Columbia University. Marcel earned his M.S. and Ph.D. in astronomy at the University of Washington in Seattle. Marcel's research interests are in stellar astronomy, and in particular neutron stars and other by-products of stellar death.</p> 
+<p>Marcel is also invested in education and diversity issues. As an undergrad, he was certified to teach high school physics, and since then, he has taught and/or worked in classrooms at every level from elementary to adult. Marcel has also worked extensively on increasing the numbers of women and underrepresented minorities in the sciences.</p></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td width="150"><img src="../images/people/jay.jpg" alt="" width="150" height="200" /></td>
+        <td valign="top"><h4><u>Jay Dubner</u></h4>
+        <p>Jay Dubner joined Columbia University's Summer Research Program for Secondary School Science Teachers in 1993 as the Program's Coordinator and Master Teacher.  His job responsibilities include the day-to-day operations of the Program, facilitating the program orientation meeting, weekly seminar series, end-of-summer symposium, grant writing, budget planning and management, day-to-day supervision of the program's participants, grant report writing, evaluation data collection, website design and maintenance. </p>
+<p> Prior to joining Columbia University, Jay was employed for 20 years by the New York City Department of Education in many capacities, including special education classroom teacher and administrator. He earned his Bachelors Degree from Long Island University, Masters Degree from C.W. Post College and post-graduate degree in School Administration and Supervision from Brooklyn College.</p>          </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="150" class="foo"><div align="center">
+      <hr width="100%" size="2" />
+      <h3><a href="../index.html">Home</a> | <a href="../about.html">About Us</a> | <a href="../people.html">People</a> | <a href="../science.html">Science</a> | <a href="../links.html">Links</a> | <a href="../contact.html">Contact Us</a></h3>
+      <h5>Support for this work was provided by the National Aeronautics and Space Administration through Chandra Award Number GO8-9012X issued by the Chandra X-ray Observatory Center, which is operated by the Smithsonian Astrophysical Observatory for and on behalf of the National Aeronautics Space Administration under contract NAS8-03060.</h5>
+      <h5>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author[s] and do not necessarily reflect the views of the Smithsonian Astrophysical Observatory and or the National Aeronautics and Space Administration.</h5>
+      <h4>Last Updated on June 15, 2008</h4>
+    </div></td>
+  </tr>
+</table>
+</body>
+</html>
